@@ -23,7 +23,7 @@ if opcion==1:
       print("Ataque:",carta["attack"])
 
 else:
-  print("Valor gili")
+  print("Nada")
 
 
 
