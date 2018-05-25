@@ -1,7 +1,8 @@
 import json
 from pprint import pprint
 import requests
-
+from colorama import Back, Style, Fore, init
+init(autoreset=True)
 
 expansion=input("Introduzca nombre de la expansion: ")
 
@@ -22,6 +23,22 @@ else:
 	for carta in data:
 		if carta["type"]=="Hero" and 'collectible' in carta and (carta["name"].startswith(cartabusca) or carta["name"].endswith(cartabusca)):
 			print (carta["name"])
-			print (carta["playerClass"])
+			if carta["playerClass"]=="Warrior":
+				print(Style.BRIGHT+"Clase:",Fore.RED+carta["playerClass"])
+			elif carta["playerClass"]=="Shaman":
+				print(Style.BRIGHT+"Clase:",Fore.BLUE+carta["playerClass"])
+			elif carta["playerClass"]=="Rogue":
+				print(Style.BRIGHT+"Clase:",Fore.BLACK+carta["playerClass"])
+			elif carta["playerClass"]=="Paladin":
+				print(Style.BRIGHT+"Clase:",Fore.YELLOW+carta["playerClass"])
+			elif carta["playerClass"]=="Hunter":
+				print(Style.BRIGHT+"Clase:",Fore.GREEN+carta["playerClass"])
+			elif carta["playerClass"]=="Druid":
+				print(Style.BRIGHT+"Clase:",Fore.BROWN+carta["playerClass"])
+			elif carta["playerClass"]=="Warlock":
+				print(Style.BRIGHT+"Clase:",Fore.MAGENTA+carta["playerClass"])
+			elif carta["playerClass"]=="Mage":
+				print(Style.BRIGHT+"Clase:",Fore.CYAN+carta["playerClass"])
+			else:
+				print(Style.BRIGHT+"Clase:",carta["playerClass"])
 			print (carta["text"])
-		#Knights of the Frozen Throne
