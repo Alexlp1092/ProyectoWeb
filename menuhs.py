@@ -1,22 +1,26 @@
 import time
+from colorama import Back, Style, Fore, init
+init(autoreset=True)
 opcion=0
+
+
 while opcion!=6:
-	print("Bienvenido a Searchstone")
+	print(Style.BRIGHT+Fore.YELLOW+"Bienvenido a Searchstone")
 	time.sleep(0.5)
-	print("Elige una expansion del formato estandar o salir del programa: ")
+	print(Style.BRIGHT+Fore.YELLOW+"Elige una expansion del formato estandar o salir del programa: ")
 	time.sleep(0.5)
-	print("1) Clásica")
+	print(Style.BRIGHT+Fore.YELLOW+"1) Clásica")
 	time.sleep(0.2)
-	print("2) Viaje a Un'Goro")
+	print(Style.BRIGHT+Fore.GREEN+"2) Viaje a Un'Goro")
 	time.sleep(0.2)
-	print("3) Caballeros del Trono Helado")
+	print(Style.BRIGHT+Fore.CYAN+"3) Caballeros del Trono Helado")
 	time.sleep(0.2)
-	print("4) Kobolds y Catacumbas")
+	print(Style.BRIGHT+Fore.RED+"4) Kobolds y Catacumbas")
 	time.sleep(0.2)
-	print("5) El Bosque Embrujado")
+	print(Style.BRIGHT+Fore.BLUE+"5) El Bosque Embrujado")
 	time.sleep(0.2)
-	print("6) Salir")
-	opcion=int(input("Introduzca opcion (1 al 6): "))
+	print(Style.BRIGHT+Fore.YELLOW+"6) Salir")
+	opcion=int(input(Style.BRIGHT+Fore.YELLOW+"Introduzca opcion (1 al 6): "))
 	print(opcion)
 	if opcion==1:
 		expansion="Classic"
@@ -31,4 +35,5 @@ while opcion!=6:
 	elif opcion==6:
 		exit
 	else:
-		print("Opcion invalida")
+		print(Style.BRIGHT+Fore.YELLOW+"Opcion invalida")
+
